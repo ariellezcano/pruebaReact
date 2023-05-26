@@ -1,4 +1,14 @@
-b{
-    color: brown;
-    font-size: 20px;
+.Form{
+    display: grid;
+    place-items: center;
+    margin: auto;
+}
+
+body{
+    text-align: center;
+    background-color: #1e1e1e;
+}
+
+#h1{
+    color: aqua;
 }

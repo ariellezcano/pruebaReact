@@ -11,7 +11,7 @@ function App() {
 
   return (
     //con mas de un argumento
-    //value={valorInp} onChange={evento => onChange(evento)}
+    //value={valorInp} onChange={(evento,evento2) => onChange(evento)}
     //con un solo argumento
     //value={valorInp} onChange={onChange}
     <div className="App">

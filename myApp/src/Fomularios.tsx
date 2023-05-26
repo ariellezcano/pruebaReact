@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Buscador from "./pages/filters/fil-buscador/fil-buscador";
+import CardPersonajes from "./pages/lst/card-personaje/card-personajes";
 
 function Formularios() {
   const url_base = "https://rickandmortyapi.com/api/character/?name=";
   const url_status = "&status=alive";
 
   const [data, setData] = useState([]);
-  const [episode, setEpisodes] = useState([]);
-  const [selectedEpisode, setSelectedEpisode] = useState("");
 
   async function getMorty(query: string) {
     try {
@@ -15,7 +15,7 @@ function Formularios() {
       const jsonData = await response.json();
       console.log(jsonData.results[0].episode);
       setData(jsonData.results);
-      setEpisodes(jsonData.results[0].episode);
+      //setEpisodes(jsonData.results[0].episode);
     } catch (error) {
       console.log(error);
     }
@@ -33,34 +33,14 @@ function Formularios() {
 
   return (
     <div className="Form">
-      <form onSubmit={onSubmit}>
-        <input type="text" onChange={onChange} />
-        <button type="submit">Botón</button>
-
-        <br />
-        <div>
-          <h1>Array Ejemplo</h1>
-          {data.map((item: any) => (
-            <div key={item.id}>
-              <p>
-                <b>{item.name}</b>&nbsp;Especie: {item.species}
-              </p>
-              <img src={item.image} alt="" />
-            </div>
-          ))}
-          <h1>Episodios</h1>
-          {episode.map((item: any, index: number) => (
-            <div key={index}>
-            <video controls>
-              <source src={item} type="video/mp4" />
-              <p>{item}</p>
-              <source src={item} type="video/webm" />
-              Tu navegador no admite la reproducción de video.
-            </video>
-          </div>
-          ))}
-        </div>
-      </form>
+      <br />
+      <Buscador onSubmit={onSubmit} onChange={onChange} />
+      <div>
+        <h1 id="h1">Array Ejemplo</h1>
+        <CardPersonajes
+        data={data}
+        />
+      </div>
     </div>
   );
 }
