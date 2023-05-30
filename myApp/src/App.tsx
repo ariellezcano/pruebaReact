@@ -18,10 +18,7 @@ function App() {
     <div className="App">
       {/* <input type="text" value={valorInp} onChange={onChange}/>
       <p>{valorInp}</p> */}
-      
-      {/* agrego el componente */}
-    <UseRef></UseRef>
-
+      <UseRef></UseRef>
     </div>
   );
 }
