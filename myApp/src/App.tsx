@@ -1,13 +1,14 @@
-import { useState } from "react";
+//import { useState } from "react";
+import UseRef from "./UseRef";
 
 function App() {
 
-  const [valorInp, setValor] = useState('');
+  // const [valorInp, setValor] = useState('');
 
-  const onChange = (evento: any) => {
-    const valor = evento.target.value;
-    setValor(valor);
-  }
+  // const onChange = (evento: any) => {
+  //   const valor = evento.target.value;
+  //   setValor(valor);
+  // }
 
   return (
     //con mas de un argumento
@@ -15,8 +16,9 @@ function App() {
     //con un solo argumento
     //value={valorInp} onChange={onChange}
     <div className="App">
-      <input type="text" value={valorInp} onChange={onChange}/>
-      <p>{valorInp}</p>
+      {/* <input type="text" value={valorInp} onChange={onChange}/>
+      <p>{valorInp}</p> */}
+      <UseRef></UseRef>
     </div>
   );
 }
