@@ -3,7 +3,7 @@ import CardPersonajes from "./pages/lst/card-personaje/card-personajes";
 import Formulario from "./formulario";
 
 function Formularios() {
-  //obtiene los datos del custom hooks
+  //obtiene los datos del custom hooks del formulario ts
   const { onSubmit, onChange, data, estaCargando } = Formulario();
 
   return (
