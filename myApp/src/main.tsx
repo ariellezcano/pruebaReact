@@ -5,10 +5,11 @@ import ReactDOM from "react-dom/client";
 //import Api from './Api'
 //import Formularios from './Fomularios'
 //import UseEffect from './useEffect'
-import Props from "./Props";
+//import Props from "./Props";
+import Selector from "./pages/components/selector/Selector";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <Props />
+    <Selector />
   </React.StrictMode>
 );
